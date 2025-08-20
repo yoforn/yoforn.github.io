@@ -1,8 +1,21 @@
-.yoforn {
+.first-div {
+    background-color: rgb(115, 10, 185);
+    font-size: 0px;
+}
+
+.yo-logo {
+    width: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 4px;
+}
+
+.forn-logo {
     font-size: 40px;
     font-weight: 800;
     color: green;
     text-shadow: 1px 1px 2px;
+    margin-right: 4px;
 }
 
 .sp {
@@ -30,10 +43,10 @@
 }
 
 .y {
-    position: fixed;
+    position: relative;
     color: whitesmoke;
     font-size: 300px;
     font-weight: 600;
-    top: 60px;
+    top: -200px;
     left: 48px
 }
