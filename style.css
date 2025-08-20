@@ -4,16 +4,16 @@
 }
 
 .yo-logo {
-    width: 40px;
+    width: 55px;
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 4px;
 }
 
 .forn-logo {
-    font-size: 40px;
+    font-size: 55px;
     font-weight: 800;
-    color: green;
+    color: white;
     text-shadow: 1px 1px 2px;
     margin-right: 4px;
 }
@@ -49,4 +49,11 @@
     font-weight: 600;
     top: -200px;
     left: 48px
+}
+
+/* forn-logo 设置位置 */
+.first-first-div {
+    position: absolute;
+    top: 4px;
+    left: 80px;
 }
