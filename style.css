@@ -10,3 +10,29 @@
     font-weight: bold;
     color: rgb(69, 180, 93);
 }
+
+.div-top {
+    width: 400px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 1);
+    position: relative;
+}
+
+.div-top div {
+    height: 152.8px;
+    width: 152.8px;
+    background-color: rgb(250, 235, 235);
+    border-radius: 50%;
+    position: relative;
+    top: 200px;
+    left: 220px;
+}
+
+.y {
+    position: fixed;
+    color: whitesmoke;
+    font-size: 380px;
+    font-weight: 600;
+    top: 60px;
+    left: 20px
+}
