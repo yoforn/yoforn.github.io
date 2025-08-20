@@ -16,11 +16,12 @@
     height: 400px;
     background-color: rgba(0, 0, 0, 1);
     position: relative;
+    border-radius: 50%;
 }
 
 .div-top div {
-    height: 152.8px;
-    width: 152.8px;
+    height: 140px;
+    width: 140px;
     background-color: rgb(250, 235, 235);
     border-radius: 50%;
     position: relative;
@@ -31,8 +32,8 @@
 .y {
     position: fixed;
     color: whitesmoke;
-    font-size: 380px;
+    font-size: 300px;
     font-weight: 600;
     top: 60px;
-    left: 20px
+    left: 48px
 }
