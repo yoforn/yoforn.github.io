@@ -24,33 +24,6 @@
     color: rgb(69, 180, 93);
 }
 
-.div-top {
-    width: 400px;
-    height: 400px;
-    background-color: rgba(0, 0, 0, 1);
-    position: relative;
-    border-radius: 50%;
-}
-
-.div-top div {
-    height: 140px;
-    width: 140px;
-    background-color: rgb(250, 235, 235);
-    border-radius: 50%;
-    position: relative;
-    top: 200px;
-    left: 220px;
-}
-
-.y {
-    position: relative;
-    color: whitesmoke;
-    font-size: 300px;
-    font-weight: 600;
-    top: -200px;
-    left: 48px
-}
-
 /* forn-logo 设置位置 */
 .first-first-div {
     position: absolute;
