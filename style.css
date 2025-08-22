@@ -1,32 +1,15 @@
-.first-div {
-    background-color: rgb(115, 10, 185);
-    font-size: 0px;
-}
-
-.yo-logo {
-    width: 55px;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 4px;
-}
-
-.forn-logo {
-    font-size: 55px;
-    font-weight: 800;
-    color: white;
-    text-shadow: 1px 1px 2px;
-    margin-right: 4px;
+.yoforn-logo {
+    width: 128px;
+    height: 32px;
 }
 
 .sp {
+    color:rgb(34, 173, 150);
     font-size: 20px;
-    font-weight: bold;
-    color: rgb(69, 180, 93);
+    font-weight: 600;
 }
 
-/* forn-logo 设置位置 */
-.first-first-div {
-    position: absolute;
-    top: 4px;
-    left: 80px;
+.first-span {
+    color: red;
+    font-weight: 600;
 }
