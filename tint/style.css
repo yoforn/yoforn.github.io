@@ -1,0 +1,68 @@
+/* bacc: 161818/000a0a 卡片: 203030 */
+
+body {
+    background-color: #fff;
+}
+
+/* 头 */
+.logo-div {
+    width: 118px;
+    /* background-color: #0A2C2C; */
+    border-radius: 22px;
+    border-bottom-right-radius: 0px;
+    height: 44px;
+    position: fixed;
+}
+
+.yoforn-logo {
+    width: 128px;
+    height: 32px;
+    position: relative;
+    right: 4px;
+    top: 6px;
+}
+
+
+
+/* content区 */
+.content-div {    
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    /* 设置内容的大小 */
+    height: 100px;
+    color: #000a0a;
+    font-weight: 600;
+    background-color: #fff;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    /* 设置边框属性 */
+    border-radius: 12px;
+    border: 1px solid rgba(0, 10, 10, 0.1);
+    padding: 18px 20px;
+}
+
+/* 鼠标hover在content时的状态 */
+.content:hover {
+    background-color: #F7FAFC;
+}
+/* 深色跳转 */
+.black {
+    width: 64px;
+    height: 64px;
+    background-color: #0FA3A3;
+    border-radius: 32px;
+    position: fixed;
+    right: 40px;
+    bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F7FAFC;
+    font-size: 20px;
+    font-weight: 600;
+}
