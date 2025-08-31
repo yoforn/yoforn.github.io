@@ -1,0 +1,613 @@
+:root {
+    /*  */
+    --color-body-bg: #121616;
+    --color-font: #c4c4c4;
+    --color-smallfont: #b2b2b2;
+    --color-scrollbar: #8c8f8f;
+    /* logo色 */
+    --color-logo-bg: #0A2C2C;
+    /* header */
+    --color-header-bg: #5e5d5d4d;
+    --color-header-bg-na: #2D3030;
+    --color-header-border: rgba(255, 255, 255, 0.05);
+
+    --color-menu-border: rgba(255, 255, 255, 0.06);
+    --color-menu-hover: #515d5d38;
+    --color-menu-hover-na: #363A3A;
+    --color-menu-underline: #0fa3a396;
+
+    --color-search-bg-na: #7c7f7f;
+    --color-search-border: rgba(230, 255, 255, 0.2);
+    --color-search-hover-na: #c4c4c4;
+
+    --color-image-bg: rgba(230, 255, 255, 0.2);
+    /* content */
+    --color-card-bg: rgba(255, 255, 255, 0.03);
+    --color-card-border: rgba(255, 255, 255, 0.05);
+    --color-card-hover: rgba(250, 255, 255, 0.07);
+
+
+    /* 添加金属色系 */
+    --color-bronze: #cd7f32; /* 铜色 */
+    --color-silver: #c0c0c0; /* 银色 */
+    --color-gold: #ffd700;   /* 金色 */
+    --color-yellowstar: rgb(180, 180, 0);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding:2%;
+    user-select: none;
+    background-color: var(--color-body-bg);
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        background-color: var(--color-body-bg);
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--color-scrollbar);
+        border-radius: 4px;
+    }
+}
+/* end body */
+header {
+    height: 42px;
+    margin-bottom: 8px;
+
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    /* 如果不设置颜色默认透明,内容浮现在后面不好看 */
+    /* background-color: #73bdbd; */
+    border-radius: 4px;
+    /* border: 1px solid var(--color-header-border); */
+
+    .logo-yoforn{
+        width: 100px;
+        padding-top: 6px;
+
+        position: fixed;
+        top: 1%;
+        z-index: 4;
+    }
+
+    & .inputAndHeadimg {
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+
+        
+        
+
+        .search {
+            outline: none;
+
+            width: 100px;
+            transition: width .06s linear;
+
+            padding: 4px;
+            padding-left: 8px;
+            color: var(--color-font);
+            background-color: var(--color-search-bg-na);
+            border-radius: 1100px;
+            border: 1px solid var(--color-search-border);
+
+            position: fixed;
+            top: 2%;
+            right: calc(2% + 38px);
+
+            &:hover,&:focus {
+                width: 160px;
+
+                background-color: var(--color-search-hover-na);
+                color: var(--color-body-bg)
+
+            }
+
+            z-index: 4;
+        }
+        & .headimg {
+            height: 30px;
+            width: 30px;
+            background-color: #1fd3d3;
+            border-radius: 50%;
+            border: 1px solid var(--color-header-border);
+
+            position: fixed;
+            right: 2%;
+            top: calc(2% - 4px);
+
+            z-index: 100;
+        }
+    }
+}
+/* end header */
+/* 侧边栏aside */
+.inputAndHeadimg {
+    label {
+        z-index: 10;
+    }
+    .asideme {
+        height: 0vh;
+        width: 0;
+        transition: width 0.1s linear, height 0.16s linear;
+        /* 内容位置 */
+        padding-top: calc(30px + 4%);
+        
+        background-color: #c4c4c4;
+        color: var(--color-body-bg);
+
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        z-index: 99;
+
+        /* 方便调试 */
+        /* width:30vh; */
+
+    }
+
+    .headimg-checkbox {
+        display: none;
+    }
+    .headimg-checkbox:checked + label +.asideme{
+        width:30vh;
+        height: 100vh;
+    }
+}
+/* 绘制图形 */
+.inputAndHeadimg {
+    .asideme {
+        & a {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-left: 4px;
+            padding-right: 4px;
+
+            text-decoration: none;
+            color:var(--color-body-bg);
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 1px;
+
+            /* 隐藏边框 */
+            border: 1px solid transparent;
+            border-radius: 16px;
+
+            &:hover {
+                border: 1px solid #5e5d5d;
+            }
+        }
+
+        .mainpage:hover + a, .fortimg:hover + a {
+            border: 1px solid #5e5d5d;
+        }
+
+        /* 选中mainpage一个级别,并减去它,设置padding-left */
+        .mainpage-outdiv > div:not(:first-of-type) {
+            padding-left: 26px;
+        } 
+
+        & .fortimg {
+            /* 和mainpage的图标一样,减去的border的2px */
+            width: 14px;
+            aspect-ratio: 1/1;
+            border: 1px solid red;
+            background-color: #8c8f8f;
+            border-radius: 50%;
+
+            margin-right: 8px;
+        }
+
+
+
+
+        /* person */
+        .person {
+            border: 1px solid var(--color-header-bg);
+            border-top: 0px;
+
+            padding: 8px;
+
+            & .email {
+                position: relative;
+
+                display: flex;
+                align-items: center;
+                & .head {
+                    border:1px solid #5e5d5d;
+                    border-radius: 4px;
+                    width: 16px;
+                    height: 12px;
+
+                    margin-right: 8px;
+                }
+                & .body {
+                    background-color: #5e5d5d;
+                    width: 16px;
+                    height: 9px;
+                    clip-path: polygon(0 0, 16px 0, 8px 9px);
+
+                    position: absolute;
+                    top: 4px;
+                }
+                & span {
+                    font-size: 14px;
+                    position: relative;
+                    top: -1px;
+                }
+            }
+            /* end email */
+
+            & .email-key {
+              & input {
+                outline: none;
+
+                width: 120px;
+                margin-left: 26px;
+                padding-left: 8px;
+
+                border-radius: 4px;
+                border: 1px solid var(--color-search-border);
+              }
+            }
+            /* end email-key */
+        }
+    }
+    /* 设置了padding */
+    & .mainpage-outdiv {
+        border: 1px solid var(--color-header-bg);
+        padding: 8px;
+    }
+    & .mainpage-outdiv > div {
+        display: flex;
+        align-items: center;
+    }
+
+    .mainpage {
+        width: 16px;
+        aspect-ratio: 1/1;
+        clip-path: polygon(
+            50% 0,       /* 顶部中心点 */
+            100% 40%,    /* 右上角点 */
+            82% 96%,     /* 右下角点 */
+            65% 96%,     /* 门的右下角点 */
+            /* x是第二个点减去27 */
+            65% 60%,     /* 门的右上角点 */
+            35% 60%,     /* 门的左上角点 */
+            35% 96%,     /* 门的左下角点 */
+            18% 96%,     /* 左下角点 */
+            0% 40%       /* 左上角点 */
+        );
+        border-radius: 0px;
+        background-color: black;
+
+        margin-right: 8px;
+
+    }
+}
+
+
+/* fortsnav start */
+.fortsnav {
+    /* 这是a的高加上边框的 */
+    height: 32px;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    background-color: var(--color-header-bg);
+
+    /* 足够大,方便一直圆角 */
+    border-radius: 100px;
+    border: 1px solid var(--color-header-border);
+
+    white-space: nowrap;
+    /* overflow-y: hidden; */
+    /* overflow-x: scroll; */
+
+    .scrollbar {
+        display: flex;
+
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        &::-webkit-scrollbar {
+            height: 8px;
+            background-color: var(--color-body-bg);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--color-scrollbar);
+            border-radius: 4px;
+        }
+    }
+    
+
+    a {
+        /* 推开scrollbar */
+        margin-bottom: 8px;
+
+        display: block;
+        /* 防止内容过多,压宽 */
+        max-width: 30px;
+        min-width: 30px;
+        aspect-ratio: 1/1;
+        
+        margin-right: 4px;
+        /* background-color: #5c5f5f; */
+
+        border-radius: 50%;
+        border: 1px solid var(--color-header-border);
+    }
+
+    .mainpage-a {
+        background-color: var(--color-font);
+
+        /* 单独设置mainpage */
+        .mainpage {
+            width: 64%;
+            aspect-ratio: 1/1;
+            clip-path: polygon(
+                50% 0,       /* 顶部中心点 */
+                100% 40%,    /* 右上角点 */
+                82% 96%,     /* 右下角点 */
+                65% 96%,     /* 门的右下角点 */
+                /* x是第二个点减去27 */
+                65% 60%,     /* 门的右上角点 */
+                35% 60%,     /* 门的左上角点 */
+                35% 96%,     /* 门的左下角点 */
+                18% 96%,     /* 左下角点 */
+                0% 40%       /* 左上角点 */
+            );
+            border-radius: 0px;
+            background-color: var(--color-body-bg);
+
+            margin: auto;
+            margin-top: 6px;
+        }
+    }
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: center;
+
+    position: fixed;
+    bottom: 2.2%;
+    left: 0;
+    right: 0;
+
+    gap: 8px;
+
+    /* border: 1px solid var(--color-header-border);
+    border-radius: 23px; */
+ 
+    & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 72px;
+        /* width/height 这里的height:32px */
+        aspect-ratio: 3/2;
+
+        border: 1px solid var(--color-menu-border);
+        border-radius: 36px;
+
+        background-color: #0A2C2C;
+
+        &.second {
+            background-color: transparent;
+        }
+    }
+
+    /* 开始绘制五角星 */
+    & .mainpage {
+        width: 34px;
+        aspect-ratio: 1/1;
+        clip-path: polygon(
+            50% 0,       /* 顶部中心点 */
+            100% 40%,    /* 右上角点 */
+            82% 96%,     /* 右下角点 */
+            65% 96%,     /* 门的右下角点 */
+            /* x是第二个点减去27 */
+            65% 60%,     /* 门的右上角点 */
+            35% 60%,     /* 门的左上角点 */
+            35% 96%,     /* 门的左下角点 */
+            18% 96%,     /* 左下角点 */
+            0% 40%       /* 左上角点 */
+        );
+        border-radius: 0px;
+        background-color: var(--color-font);
+    }
+    /* 绘制人物 */
+    & .third {
+        /* 给head一个位置 */
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        & .head {
+            width: 30px;
+            aspect-ratio: 1/1;
+            border-radius: 15px;
+            background-color: var(--color-font);
+
+            position: absolute;
+            top: 4px;
+        }
+        & .body {
+            width: 40px;
+            aspect-ratio: 1/1;
+            border-radius: 20px;
+            border-top: 4px solid var(--color-font);
+
+            position: relative;
+            top: 24px;
+        }
+    }
+}
+/* end bottom-nav */
+main {
+
+    min-height: 200vh;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    /* 使内容在更多屏幕上更加美观 */
+    padding-left: 8px;
+    padding-right: 8px;
+
+    & .articlediv:first-of-type {
+        margin-top: 20px;
+    }
+    & .articlediv {
+        /* 内容的宽高比 */
+        aspect-ratio: 32/8;
+        /* 设置最大的高,用%噢 */
+        /* 32/64不错,看8的几倍 */
+        max-height: 800%;
+        margin-bottom: 8px;
+
+        background-color: var(--color-card-bg);
+        border: 1px solid var(--color-card-border);
+        border-radius: 4px;
+        border-top-left-radius: 18px;
+
+        &:hover {
+            background-color: var(--color-card-hover);
+            border: 1px solid transparent;
+        }
+    }
+
+    /* 设置内部组件 */
+    & .articlediv {
+        /* 给star一个定位 */
+        position: relative;
+
+        /*  */
+       & .imgAndName {
+            display: flex;
+            /* 默认值 */
+            justify-content: start;
+
+            & .img {
+                width: 30px;
+                aspect-ratio: 1/1;
+                margin-top: 6px;
+                margin-left: 6px;
+                /* 这是给name位置 */
+                margin-right: 4px;
+                background-color: var(--color-logo-bg);
+
+                border-radius: 50%;
+                border: 1px solid var(--color-header-border);
+            }
+            & .name {
+                width: 15ch;
+                /* img的height加上margin-top */
+                font-size: 12px;
+                line-height: 4ch;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: var(--color-font);
+            }
+       }
+       /* star start */
+        & .star {
+            color: var(--color-smallfont);
+
+            display: flex;
+            align-items: center;
+            gap: 2px;
+
+            position: absolute;
+            right: 4%;
+            bottom: 5px;
+
+            & .logo {
+                height:18px;
+                width: 18px;
+                background-color: var(--color-yellowstar);
+                clip-path: polygon(50% 0,100% 40%, 82% 96%, 18% 96%, 0% 40%);
+            }
+            /* end */
+            & .num {
+                width: 60px;
+                font-size: 12px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    /* end articlediv */
+}
+/* end main */
+
+
+
+
+
+@media(max-width: 380px) {
+    header {
+
+        & .logo-yoforn {
+            width: 80px;
+            padding-top: 6px;
+        }
+
+        & .inputAndHeadimg {
+            & input {
+            height: 24px;
+            width: 160px;
+            }
+            & .headimg {
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+    /* end header */
+    .bottom-nav {
+        & > div {
+             width: 48px;
+             border-radius: 16px;
+        }
+        & .mainpage {
+            width: 22px;
+        }
+        /* 人物 */
+        & .third {
+            & .head {
+                width: 20px;
+                border-radius: 10px;
+
+                position: absolute;
+                top: 2px;
+            }
+            & .body {
+                width: 28px;
+
+                border-radius: 14px;
+                border-top: 2px solid var(--color-font);
+
+                position: relative;
+                top: 16px;
+            }
+        }
+    }
+    /* end bottom-nav */
+}
+
